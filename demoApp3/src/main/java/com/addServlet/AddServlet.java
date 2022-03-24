@@ -21,8 +21,9 @@ public class AddServlet extends HttpServlet{
 		
 		res.getWriter().println("Result is:" + k);
 		
+		//sending data to SqServlet
+		req.setAttribute("k", k);	
 		//request dispatcher 
-		
 		RequestDispatcher rd = req.getRequestDispatcher("sq");
 		rd.forward(req, res);
 	}
